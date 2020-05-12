@@ -1,0 +1,7 @@
+@contests.map do |bet|
+  {
+    contest_date: contest.date,
+    contest_time: contest.line,
+    line: contest.time,
+  }
+end

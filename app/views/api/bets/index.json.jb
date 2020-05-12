@@ -1,0 +1,6 @@
+@bets.map do |bet|
+  {
+    contest_id: bet.contest_id,
+
+  }
+end

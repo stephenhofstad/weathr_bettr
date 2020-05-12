@@ -1,0 +1,6 @@
+{
+  contest: @bet.contest_id,
+  pick: @bet.pick,
+  amount: @bet.amount,
+  status: @bet.status,
+}
