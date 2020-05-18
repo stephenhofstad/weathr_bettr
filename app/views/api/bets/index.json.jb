@@ -1,6 +1,10 @@
 @bets.map do |bet|
   {
     contest_id: bet.contest_id,
+    pick: bet.pick,
+    amount: bet.amount,
+    user_id: bet.user_id,
+    status: bet.status,
 
   }
 end

@@ -3,4 +3,5 @@
   pick: @bet.pick,
   amount: @bet.amount,
   status: @bet.status,
+  bet_id: @bet.id,
 }

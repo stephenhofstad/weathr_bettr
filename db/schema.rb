@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_12_000113) do
+ActiveRecord::Schema.define(version: 2020_05_08_003534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bets", force: :cascade do |t|
-    t.string "contest_id"
-    t.string "user_id"
+    t.integer "contest_id"
+    t.integer "user_id"
     t.string "amount"
     t.string "pick"
     t.string "status"
@@ -40,12 +40,11 @@ ActiveRecord::Schema.define(version: 2020_05_12_000113) do
     t.string "address"
     t.string "email"
     t.integer "balance"
-    t.string "password"
+    t.string "password_digest"
     t.string "phone"
     t.integer "bet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password_digest"
   end
 
 end

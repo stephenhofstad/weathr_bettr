@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :address
       t.string :email
       t.integer :balance
-      t.string :password
+      t.string :password_digest
       t.string :phone
       t.integer :bet_id
 

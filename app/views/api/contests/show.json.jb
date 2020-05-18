@@ -1,6 +1,6 @@
 {
-  contest: @contest.contest_id,
-  pick: @contest.pick,
-  amount: @contest.amount,
-  status: @contest.status,
+  date: @contest.date,
+  time: @contest.time,
+  win: @contest.win,
+  line: @contest.line,
 }

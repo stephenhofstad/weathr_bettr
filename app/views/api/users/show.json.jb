@@ -1,3 +1,16 @@
 {
   first_name: @user.first_name,
+  last_name: @user.last_name,
+  email: @user.email,
+  balance: @user.balance,
+  bets: @user.bets.map do |bet|
+    {
+      id: bet.id,
+      amount: bet.amount,
+      contest: bet.contest,
+      pick: bet.pick,
+      status: bet.status,
+    }
+  end,
+# contests: @user.contests,
 }
