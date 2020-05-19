@@ -1,8 +1,10 @@
 @contests.map do |contest|
   {
     date: contest.date,
-    time: contest.time,
+    game: contest.game,
     line: contest.line,
     win: contest.win,
+    contest_id: contest.id,
+    real_temp: contest.real_temp,
   }
 end

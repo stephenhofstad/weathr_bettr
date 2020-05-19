@@ -1,0 +1,20 @@
+ def chicken_dinner
+    if bet.pick = "over" && bet.real_temp > contest.line
+      status = "win"
+    elsif bet.pick = "over" && bet.real_temp < contest.line
+      status = "lose"
+    elsif bet.pick = "under" && bet.real_temp > contest.line
+      status = "lose"
+    elsif bet.pick = "under" && bet.real_temp < contest.line
+      status = "win"
+    else
+      status = "pending"
+    end
+  end
+
+
+if status = "win"
+ user.balance = user.balance + (bet.amount * 1.909)
+end
+
+user.balance = user.balance - bet.amount

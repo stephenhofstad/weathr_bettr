@@ -1,6 +1,8 @@
 {
   date: @contest.date,
-  time: @contest.time,
+  game: @contest.game,
   win: @contest.win,
   line: @contest.line,
+  contest_id: @contest.id,
+  real_temp: @contest.real_temp,
 }

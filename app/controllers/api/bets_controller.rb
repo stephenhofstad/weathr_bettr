@@ -7,10 +7,10 @@ class Api::BetsController < ApplicationController
   def create
     @bet = Bet.new(
       contest_id: params[:contest_id],
-      user_id: params[:user_id],
+      user_id: current_user.id,
       amount: params[:amount],
       pick: params[:pick],
-      status: params[:status],
+      status: "pending",
     )
     @bet.save
     render "show.json.jb"

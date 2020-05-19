@@ -27,21 +27,19 @@ ActiveRecord::Schema.define(version: 2020_05_08_003534) do
 
   create_table "contests", force: :cascade do |t|
     t.string "date"
-    t.string "time"
+    t.string "game"
     t.string "win"
-    t.string "line"
+    t.integer "line"
+    t.integer "real_temp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "address"
+    t.string "name"
     t.string "email"
     t.integer "balance"
     t.string "password_digest"
-    t.string "phone"
     t.integer "bet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

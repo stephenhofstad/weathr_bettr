@@ -7,9 +7,10 @@ class Api::ContestsController < ApplicationController
   def create
     @contest = Contest.new(
       date: params[:date],
-      time: params[:time],
+      game: params[:game],
       win: params[:win],
       line: params[:line],
+      real_temp: params[:real_temp],
     )
     @contest.save
     render "show.json.jb"
@@ -23,9 +24,10 @@ class Api::ContestsController < ApplicationController
   def update
     @contest = Contest.find_by(id: params[:id])
     @contest.date = params[:date] || @contest.date
-    @contest.time = params[:time] || @contest.time
+    @contest.game = params[:game] || @contest.game
     @contest.win = params[:win] || @contest.win
     @contest.line = params[:line] || @contest.line
+    @contest.real_temp = params[:real_temp] || @contest.real_temp
     @contest.save
     render "show.json.jb"
   end

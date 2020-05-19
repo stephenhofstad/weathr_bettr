@@ -1,6 +1,5 @@
 {
-  first_name: @user.first_name,
-  last_name: @user.last_name,
+  name: @user.name,
   email: @user.email,
   balance: @user.balance,
   bets: @user.bets.map do |bet|
@@ -12,5 +11,4 @@
       status: bet.status,
     }
   end,
-# contests: @user.contests,
 }
