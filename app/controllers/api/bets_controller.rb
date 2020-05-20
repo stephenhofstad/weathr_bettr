@@ -12,6 +12,7 @@ class Api::BetsController < ApplicationController
       pick: params[:pick],
       status: "pending",
     )
+    @bet.update_balance
     @bet.save
     render "show.json.jb"
   end

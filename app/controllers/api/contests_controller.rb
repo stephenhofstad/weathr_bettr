@@ -29,6 +29,9 @@ class Api::ContestsController < ApplicationController
     @contest.line = params[:line] || @contest.line
     @contest.real_temp = params[:real_temp] || @contest.real_temp
     @contest.save
+    @contest.bets.each do |bet|
+      bet.update_results
+    end
     render "show.json.jb"
   end
 

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_05_08_003534) do
   create_table "bets", force: :cascade do |t|
     t.integer "contest_id"
     t.integer "user_id"
-    t.string "amount"
+    t.integer "amount"
     t.string "pick"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false

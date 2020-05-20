@@ -3,7 +3,7 @@ class CreateBets < ActiveRecord::Migration[6.0]
     create_table :bets do |t|
       t.integer :contest_id
       t.integer :user_id
-      t.string :amount
+      t.integer :amount
       t.string :pick
       t.string :status
 

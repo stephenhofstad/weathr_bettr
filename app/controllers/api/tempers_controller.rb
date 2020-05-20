@@ -6,10 +6,10 @@ class Api::TempersController < ApplicationController
     temps = []
     tempf = 0
     while index < 48
-      empty_hash = {}
-      tempf = (tempers[index]["air_temperature"].to_f * 9 / 5) + 32
-      empty_hash[tempf] = tempers[index]["measurement_timestamp_label"]
-      temps << empty_hash
+      empty_array = []
+      tempf = tempers[index]["measurement_timestamp_label"]
+      empty_array << [tempf, (tempers[index]["air_temperature"].to_f * 9 / 5) + 32]
+      temps << empty_array
       index += 1
     end
 

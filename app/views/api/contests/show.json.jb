@@ -5,4 +5,5 @@
   line: @contest.line,
   contest_id: @contest.id,
   real_temp: @contest.real_temp,
+  bets: @contest.bets,
 }
